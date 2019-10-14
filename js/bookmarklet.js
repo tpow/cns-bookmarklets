@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function(){
             var opt = document.createElement('option');
             opt.text = prop;
             opt.value = quickmodules[prop];
-            dropdown.append(opt);
+            dropdown.appendChild(opt);
             //console.log(opt);
         }
     }
