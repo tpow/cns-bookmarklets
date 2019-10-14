@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bookmarklets for CampusNexus Student Web Client</title>
+  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <style type="text/css">
+  .footer-links a.au { color: #99ccff; }
+  .fineprint { opacity: 0.8; font-size:smaller}
+  .hidden {display: none; }
+  .post-qform { padding-top: 10px }
+  .qform { padding: 10px; background-color: #f5f5f5 }
+  .warn {border:1px solid #390; margin: .5em -1em; padding: 1em 1em; background-color: #efe}
+  #home { border-bottom: 1px solid #ddd8d2; padding-bottom: 15px }
+  #qcode { display: none }
+  #marklet {width: 600px }
+  .github-corner { fill: #626262; color: #fff; position: fixed; top: 0; right: 0; border: 0; z-index: 100; opacity: 1; }
+  .github-corner:hover { opacity: 1; }
+  .github-corner:hover .octo-arm { animation: octocat-wave 560ms ease-in-out }
+  @keyframes octocat-wave { 0%, 100% { transform: rotate(0) } 20%, 60% { transform: rotate(-25deg) } 40%, 80% { transform: rotate(10deg) } }
+  @media (max-width:500px) { .github-corner:hover .octo-arm { animation: none } .github-corner .octo-arm { animation: octocat-wave 560ms ease-in-out } }
+  </style>
+</head>
+<body class="has-nav-fixed-top">
+<a href="#GitHubLink" target="_blank" class="github-corner display-md-up" aria-label="View source on Github" title="View on GitHub">
+    <svg width="50" height="50" viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+  <nav class="nav nav-fixed-top" role="navigation" aria-label="main navigation">
+    <div class="nav-container">
+    <div class="nav-brand">
+      <a class="nav-item" href="#" title="Home">Campus<strong>Nexus</strong>&nbsp;Bookmarklets</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#GitHubLink" target="_blank">GitHub</a></li>
+    </ul>
+    <a class="mobile-menu-toggle"></a>
+    <ul class="mobile-menu menu" style="display: none">
+      <li><a href="#GitHubLink" target="_blank">GitHub</a></li>
+    </ul>
+    </div>
+  </nav>
+
+  <section class="section-primary" id="home">
+    <div class="container">
+      <noscript><p class="alert alert-info alert-border">You need JavaScript enabled in order to use this page.</p></noscript>
+      <p><strong>What's this?</strong> Bookmarklets are &#8220;Smart Bookmarks&#8221;, tiny programs that expand the functionality of a website with the click of a bookmark. Bookmarklets work almost everywhere &#8212; PCs, Macs, tablets, even mobile phones &#8212; and with all major browsers including Chrome, Edge, Firefox, Internet Explorer, and Safari. The bookmarklets on this page are helpful when using the <a href="https://www.campusmanagement.com/products/student-information-system/">CampusNexus Student</a> Web Client. Once you are signed in to the Web Client, click a bookmarklet just like you would a normal bookmark to trigger its action.</p>
+      <p><strong>How do I save them?</strong> Before you can use a bookmarklet, you need to save it in your browser's bookmarks or favorites. Most browsers have a special toolbar for this that gives you convenient access to your bookmarks. Enable the bookmarks toolbar and then drag the bookmarklet button on to it. If you wish, you can then rename the bookmark.</p>
+      <p id="howto"></p>
+      <div id="warn" class="hidden"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" id="quicklink">
+      <h2 id="maker">Quick Links</h2>
+      <p>Quickly switch to a module and tile for a student in the CampusNexus Student Web Client similiar to buttons on the Desktop Client's Custom Toolbar. To use this you must already be working with a student's record. This is just like expanding a module section and clicking on a tile (and sometimes on a tab after that) but can be faster and easier.</p>
+
+      <div class="row">
+      <div class="col col-md-9">
+      <form role="form" class="qform">
+        <div class="form-group">
+        <p>1. Choose what you want the bookmarklet to open. The bookmarklet button below updates as you change this form.</p>
+        <label for="mname">Module and Tile name</label>
+        <select id="mname" class="form-control">
+        </select>
+        </div>
+        <div class="checkbox">
+        <label>
+        <input type="checkbox" id="newwin">&nbsp;Always open in a new tab</label>
+        </div>
+      </form>
+
+      <div class="post-qform">
+      <p>2. Drag quick link for <a href="#" id="mlink" class="button button-success"><span id="bname"></span></a> to your bookmarks bar.</p>
+      </div>
+
+      </div>
+      <div class="col col-md-3">
+      <p class="">Tips:</p>
+      <ul>
+      <li>Feel free to rename the bookmark.</li>
+      <li>To add a picture like the custom toolbar, many browsers let you use <a href="https://emojipedia.org">Emojis</a> in the bookmark name.</li>
+      <li>You can use folders to organize your CampusNexus bookmarks.</li>
+      </ul>
+      </div>
+      </div>
+
+      <!-- For debugging. Use document.getElementById('qcode').style="display:block" in console to reveal -->
+      <div id="qcode">
+      <label for="marklet">Bookmarklet Code</label>
+      <p><textarea id="marklet" rows="5"></textarea></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-secondary">
+    <div class="container" id="convenience">
+      <h2>Convenience</h2>
+      <p>These bookmarklets are general-purpose. They can be handy when working with the Web Client.</p>
+
+      <div class="row">
+        <div class="col col-md-6">
+          <div class="card">
+    <h3 class="card-title">Duplicate Tab</h3>
+    <p>Duplicates the current page in a new tab. This makes it easy to copy a page so you can return to it later or to do comparisons.</p>
+    <p>Drag <a href="javascript:(function(){var%20d=new%20Date();window.open(location.href,'w'+d.getTime())})()" class="button button-success">Duplicate Tab</a> to your bookmarks bar.</p>
+          </div>
+        </div>
+        <div class="col col-md-6">
+          <div class="card">
+    <h3 class="card-title">Rename Tab</h3>
+    <p>Lets you change the title of the web page window or tab. This might be useful if you're working with a lot of similarly named tabs.</p>
+    <p>Drag <a href="javascript:(function(){var%20t=document.title,n=prompt('Enter%20a%20new%20title%20for%20this%20tab',t);if(n!=null&&n!=t)document.title=n})()" class="button button-success">Rename Tab</a> to your bookmarks bar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+     <div class="container">
+     <div class="row">
+     <div class="footer-text">
+     <p class="footer-links"><strong>Disclaimer:</strong> These bookmarklets were developed by Tim Powell at <a href="https://asbury.edu/its" class="au">Asbury University</a>, not by Campus Management. Because the Web Client is under active development, some of these could break or require changes between versions. These are intended to work with the current <strong>21.0 version</strong>. If you find them useful and want to share them, please direct people to this page. If you find problems or have ideas for improvements, please create an Issue on <a href="#GitHubLink">GitHub.</a></p>
+
+     <p>Copyright &copy; 2019 Asbury University &amp; Tim Powell <span class="fineprint">(Developers)</span></p>
+     <!-- Copyright (c) 2019 Asbury University & Tim Powell (Developers). -->
+     <p class="fineprint">
+     In no event shall the Developers of this software be liable to any party
+     for direct, indirect, special, incidental, or consequential damages,
+     including lost profits, arising out of the use of this software and its
+     documentation, even if they have been advised of the possibility of such
+     damage.</p>
+
+     <p class="fineprint">
+     The Developers specifically disclaim any warranties, including, but not
+     limited to, the implied warranties of merchantability and fitness for a
+     particular purpose. The software and accompanying documentation, if any,
+     provided hereunder is provided "as is". The Developers have no obligation
+     to provide maintenance, support, updates, enhancements, or modifications.
+     </p>
+     </div>
+     </div>
+     </div>
+  </footer>
+
+  <script src="js/browser-detect.js"></script> <!-- for browser-specific help -->
+  <script src="js/iosify.js"></script> <!-- easier iOS bookmarklets -->
+  <script src="js/bookmarklet.js"></script>
+</body>
+</html>
