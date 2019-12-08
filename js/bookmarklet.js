@@ -151,11 +151,11 @@ function fixtitle() {
     // Set the page title to match bookmark name if in URL
     if (location.hash) {
        var title = "Bookmarklets for CampusNexus Student Web Client"; // default
-       var testmsg = "alert('Can\\'t%20open%20"; // see bookmarklet code
-       var offset = location.hash.indexOf(testmsg);
+       var testmsg = encodeURIComponent("//bookmarkletname:"); // see iosify
+       var offset = location.hash.lastIndexOf(testmsg);
        if (offset != -1) {
           offset += testmsg.length;
-          title = location.hash.substring(offset, location.hash.indexOf('\\n',offset));
+          title = location.hash.substring(offset);
           title = decodeURIComponent(title);
        }
        document.title = title;

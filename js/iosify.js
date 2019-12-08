@@ -9,6 +9,7 @@ function iosify(clsname) {
     for (i=0; i<links.length; i++) {
       if (links[i].href.lastIndexOf("javascript:", 0) === 0) {
         links[i].href = links[i].href.replace("javascript:", bH+"#javascript:");
+        links[i].href += encodeURIComponent("//bookmarkletname:"+links[i].text);
       }
     }
   }
