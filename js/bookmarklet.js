@@ -153,7 +153,7 @@ function fixtitle() {
        var testmsg = "alert('Can\\'t%20open%20";
        var offset = location.hash.indexOf(testmsg);
        if (offset != -1) {
-          offset += testmsg.length();
+          offset += testmsg.length;
           var title = location.hash.substring(offset, location.hash.indexOf('\\n',offset));
           document.title = decodeURIComponent(title);
        }
