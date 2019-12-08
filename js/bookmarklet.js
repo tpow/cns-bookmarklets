@@ -148,15 +148,17 @@ function makeqlbookmarklet() {
 }
 
 function fixtitle() {
-    // Set the page title to match bookmark name
+    // Set the page title to match bookmark name if in URL
     if (location.hash) {
-       var testmsg = "alert('Can\\'t%20open%20";
+       var title = "Bookmarklets for CampusNexus Student Web Client"; // default
+       var testmsg = "alert('Can\\'t%20open%20"; // see bookmarklet code
        var offset = location.hash.indexOf(testmsg);
        if (offset != -1) {
           offset += testmsg.length;
-          var title = location.hash.substring(offset, location.hash.indexOf('\\n',offset));
-          document.title = decodeURIComponent(title);
+          title = location.hash.substring(offset, location.hash.indexOf('\\n',offset));
+          title = decodeURIComponent(title);
        }
+       document.title = title;
     }
 }
 
