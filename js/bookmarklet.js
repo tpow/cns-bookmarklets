@@ -180,7 +180,7 @@ function showhelp() {
     }
     if (location.hash && location.hash.indexOf('#javascript:') != -1) {
        // do stuff
-       warn.innerHTML = "<p><strong>You're ready!</strong> To finish saving the bookmarklet:<br />1. Bookmark this page and close the bookmark<br />2. Edit the bookmark and change the address (URL). You need to remove everything up to and including the #. The address should begin with &quot;javascript:&quot;.<br />3. The bookmarklet is ready to use. <a href=\"#\" onlick=\"location.hash='#'\">Get another Bookmarklet</a>.</p>";
+       warn.innerHTML = "<p><strong>You're ready!</strong> To finish saving the bookmarklet:<br />1. Bookmark this page and close the bookmark<br />2. Edit the bookmark and change the address (URL). You need to remove everything up to and including the #. The address should begin with &quot;javascript:&quot;.<br />3. The bookmarklet is ready to use. <a href=\"#\" onlick=\"location.hash='#new'\">Get another Bookmarklet</a>.</p>";
        warn.className = "warn";
        howto.scrollIntoView();
     }
