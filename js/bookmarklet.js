@@ -147,6 +147,19 @@ function makeqlbookmarklet() {
     document.getElementById('mlink').setAttribute('href', str);
 }
 
+function fixtitle() {
+    // Set the page title to match bookmark name
+    if (location.hash) {
+       var testmsg = "alert(Can\\'t%20open%20";
+       var offset = location.hash.indexOf(testmsg);
+       if (offset != -1) {
+          offset += testmsg.length();
+          var title = location.hash.substring(offset, location.hash.indexOf('\\n',offset));
+          document.title = decodeURIComponent(title);
+       }
+    }
+}
+
 function showhelp() {
     var howto = document.getElementById('howto');
     var warn = document.getElementById('warn');
@@ -169,6 +182,7 @@ function showhelp() {
        warn.className = "warn";
        howto.scrollIntoView();
     }
+    fixtitle();
 }
 
 document.addEventListener('DOMContentLoaded', function(){
