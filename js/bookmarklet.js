@@ -150,7 +150,7 @@ function makeqlbookmarklet() {
 function fixtitle() {
     // Set the page title to match bookmark name
     if (location.hash) {
-       var testmsg = "alert(Can\\'t%20open%20";
+       var testmsg = "alert('Can\\'t%20open%20";
        var offset = location.hash.indexOf(testmsg);
        if (offset != -1) {
           offset += testmsg.length();
