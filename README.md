@@ -1,6 +1,6 @@
 # cns-bookmarklets                                                               
-                                                                                 
-A collection of bookmarklets for the CampusNexus Student Web Client         
+
+A collection of bookmarklets for the CampusNexus Student Web Client
 
 See the [Bookmarklets for CampusNexus Student Web Client](https://tpow.github.io/cns-bookmarklets/) web page for more information and to get the bookmarklets.
 
@@ -9,7 +9,7 @@ These bookmarklets were developed by Tim Powell at [Asbury University](https://a
 
 ## Copyright and Licenses
 
-Copyright 2019 Asbury University & Tim Powell
+Copyright 2019-2020 Asbury University & Tim Powell
 
 We use [Systematize](http://github.com/mvasilkov/systematize) for CSS normalization and the [Mustard UI](https://mustard-ui.com/) CSS framework. Both are MIT Licensed.
 
