@@ -12,8 +12,9 @@ var quickmodules = {
    'Contact Manager - Transcript Requests': '/transcript-requests',
    'Contact Manager - Contact Preferences': '/student-contact-preferences',
    'Contact Manager - FERPA': '/ferpa',
+   'Contact Manager - Residencies': '/residencies', // New in 21.1
    'Contact Manager - International': '/international',
-   'Contact Manager - Audit': '/audit',
+   'Contact Manager - Audit': '/audit', // Cannot bookmark the tabs
    'Admissions - Inquiries': '/prospect-inquiries',
    'Admissions - Applications': '/applicants',
    'Admissions - Previous Education': '/student-previous-educations',
@@ -27,7 +28,9 @@ var quickmodules = {
    'Academic Records - Student Courses Daily': '/dailyschedule/', // 21 KEPT the slash here
    'Academic Records - Student Courses Weekly': '/weeklyschedule', // 21 dropped the slash
    'Academic Records - Student Courses Monthly': '/monthlyschedule', // 21 dropped the slash
-   'Academic Records - Degree Progress Audit': '/degree-progress-audit',
+   // 'Academic Records - Degree Progress Audit': '/degree-progress-audit', // 21
+   'Academic Records - Degree Progress Audit': 'degree-progress-audit-general/degree-progress-audit', // 21.1
+   //'Academic Records - Degree Progress Audit - Requirment Rules': 'degree-progress-audit-general/degreeProgressAuditRequirementRule', // 21.1 should work but doesn't
    'Academic Records - Degree Pathway': '/degree-pathway',
    'Academic Records - Degrees Honors Badges': '/honors',
    'Academic Records - Student Status History': '/status-history',
@@ -40,16 +43,18 @@ var quickmodules = {
    'Career Services - Placements and Internships': '/student-career-services-placements',
    'Career Services - Advisor and Preferences': '/placement-preferences',
    'Career Services - Certifications and Skills': '/placement-skills',
+   'Career Services - School Fields': '/school-fields-CareerServices/CareerServices', // 21.1
    'Career Services - Status History': '/placement-status-history',
    'Career Services - Audit': '/career-services-audit',
    'Financial Aid - Awarding': '/financial-awarding',
    'Financial Aid - Awarding - Academic Years': '/financial-awarding/academic-years',
    'Financial Aid - Awarding - Awards': '/financial-awarding/awards',
-   'Financial Aid - Awarding - Student View': '/financial-awarding/student-view',
+   'Financial Aid - Awarding - Student View': '/financial-awarding/student-view', // inconsistent in 21.1
    'Financial Aid - NSLDS': '/financial-nslds',
    'Financial Aid - Estimate': '/estimate',
    'Financial Aid - SAP Summary': '/sapSummary',
-   'Financial Aid - Subsidized Usage': '/student-award-loans-cod-subsidized-details',
+   'Financial Aid - Loan Information': '/student-loan-information', // 21.1 - Informed Borrower tab
+   // 'Financial Aid - Subsidized Usage': '/student-award-loans-cod-subsidized-details', // 21
    'Financial Aid - ISIRs Received': '/student-isir-received-client-entity/', // Can do Year-specific too:
    'Financial Aid - ISIRs Received 2020-21': '/student-isir-received-client-entity/2020-21',
    'Financial Aid - State Report Evaluation': '/state-grant-eligible-students/', // Technically ends with systudentid, too
@@ -67,6 +72,8 @@ var quickmodules = {
    //'Student Accounts - Revenue Ledger': '/revenueLedger', // 19
    'Student Accounts - Revenue Ledger': '/revenueLedger/', // 20 and 21 incorrectly requires the slash
    'Student Accounts - Subsidiary': '/subsidiary',
+   'Student Accounts - Subsidiary - Transactions': '/subsidiary/transactions', // 21.1
+   'Student Accounts - Subsidiary - Refunds': '/subsidiary/refunds', // 21.1
    'Student Accounts - Tuition Discount': '/tuition-discount',
    'Student Accounts - Payment Schedule': '/paymentSchedule',
    'Student Accounts - Stipend Schedule': '/stipend-schedule',
@@ -82,7 +89,7 @@ var quickmodules = {
    'Student Services - Veteran': '/student-veteran-details',
    'Student Services - School Fields 20.x Only': '/school-fields-studentservices/studentservices', // 20.x
    'Student Services - School Fields': '/school-field/studentservices', // 21. Why no s on school-fields?
-   'Student Services - School Fields - Housing': '/school-field/housing', // Correct URL for 21, but bookmark doesn't work
+   'Student Services - School Fields - Housing': '/school-field/housing', // Correct URL for 21 and 21.1, but bookmark doesn't work
    'Student Services - Audit': '/services-audit',
 }
 
