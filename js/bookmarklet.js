@@ -87,7 +87,7 @@ var quickmodules = {
    'Student Services - Housing Leases': '/student-application-lease-details',
    'Student Services - Housing Deposits': '/housing-deposits',
    'Student Services - Veteran': '/student-veteran-details',
-   'Student Services - School Fields 20.x Only': '/school-fields-studentservices/studentservices', // 20.x
+   // 'Student Services - School Fields 20.x Only': '/school-fields-studentservices/studentservices', // 20.x
    'Student Services - School Fields': '/school-field/studentservices', // 21. Why no s on school-fields?
    'Student Services - School Fields - Housing': '/school-field/housing', // Correct URL for 21 and 21.1, but bookmark doesn't work
    'Student Services - Audit': '/services-audit',
