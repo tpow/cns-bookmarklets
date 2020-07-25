@@ -11,5 +11,5 @@ These bookmarklets were developed by Tim Powell at [Asbury University](https://a
 
 Copyright 2019-2020 Asbury University & Tim Powell
 
-We use [Systematize](http://github.com/mvasilkov/systematize) for CSS normalization and the [Mustard UI](https://mustard-ui.com/) CSS framework. Both are MIT Licensed.
+We use [Systematize](http://github.com/mvasilkov/systematize) for CSS normalization and the [Mustard UI](https://github.com/kylelogue/mustard-ui) CSS framework. Both are MIT Licensed.
 
