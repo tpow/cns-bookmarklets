@@ -98,7 +98,7 @@ var b = getBrowser();
 var browser = b.browser;
 function browserName() {
    var n = '';
-   if (browser.chrome) n += 'Chrome';
+   if (browser.chrome && ! browser.edge) n += 'Chrome';
    else if (browser.firefox) n += 'Firefox';
    else if (browser.msie) n += 'Internet Explorer';
    else if (browser.edge) n += 'Edge';
@@ -175,10 +175,10 @@ function showhelp() {
     howto.innerHTML = 'It looks like you are using <b>' + browser.name + '</b>.';
     if (browser.safari && ! browser.ios) {
        howto.innerHTML += ' On a Mac, the bookmarks toolbar is called the Favorites Bar. Enable it with <span title="Command">&#8984;</span>+Shift+B or View &gt; Show Favorites Bar.';
-    } else if (browser.chrome) {
+    } else if (browser.chrome && ! browser.edge) {
        howto.innerHTML += ' Enable the Bookmarks Bar with Ctrl+Shift+B (or <span title="Command">&#8984;</span>+Shift+B on a Mac.)';
     } else if (browser.edge || browser.msie) {
-       howto.innerHTML += ' The bookmarks toolbar is called the Favorites bar. Enable it with Ctrl+Shift+B.';
+       howto.innerHTML += ' The bookmarks toolbar is called the Favorites bar. Enable it with Ctrl+Shift+B (or <span title="Command">&#8984;</span>+Shift+B on a Mac.)';
     } else if (browser.firefox) {
        howto.innerHTML += ' To show the bookmarks toolbar, right-click on an empty spot on the tab bar &#8212; where the tabs are located &#8212; and select Bookmarks Toolbar from the context menu that appears.';
     } else if (browser.safari && browser.ios) {
