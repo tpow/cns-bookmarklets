@@ -29,8 +29,8 @@ var quickmodules = {
    'Academic Records - Student Courses Weekly': '/weeklyschedule', // 21 dropped the slash
    'Academic Records - Student Courses Monthly': '/monthlyschedule', // 21 dropped the slash
    // 'Academic Records - Degree Progress Audit': '/degree-progress-audit', // 21
-   'Academic Records - Degree Progress Audit': 'degree-progress-audit-general/degree-progress-audit', // 21.1
-   //'Academic Records - Degree Progress Audit - Requirment Rules': 'degree-progress-audit-general/degreeProgressAuditRequirementRule', // 21.1 should work but doesn't
+   'Academic Records - Degree Progress Audit': '/degree-progress-audit-general/degree-progress-audit', // 21.1
+   //'Academic Records - Degree Progress Audit - Requirment Rules': '/degree-progress-audit-general/degreeProgressAuditRequirementRule', // 21.1 should work but doesn't
    'Academic Records - Degree Pathway': '/degree-pathway',
    'Academic Records - Degrees Honors Badges': '/honors',
    'Academic Records - Student Status History': '/status-history',
